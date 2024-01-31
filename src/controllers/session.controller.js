@@ -1,3 +1,4 @@
+import { sendInactiveUserEmail } from "../config/nodemailer.js";
 import { usersModel } from "../models/users.models.js";
 import { generateToken } from "../utils/jwt.js";
 
@@ -78,6 +79,7 @@ export const deleteInactiveSessions = async (request, res) => {
             });
           });
         }
+        sendInactiveUserEmail(user.email);
       })
     );
 

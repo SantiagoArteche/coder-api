@@ -27,3 +27,20 @@ export const sendRecoveryMail = (email, recoveryLink) => {
     }
   });
 };
+
+export const sendInactiveUserEmail = (email) => {
+  const mailOptions = {
+    from: "santiarteche7@gmail.com",
+    to: email,
+    subject: "Notificacion de deslogeo",
+    text: "Haz sido deslogeado debido a tu inactividad",
+  };
+
+  transport.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Notificacion enviada exitosamente");
+    }
+  });
+};
