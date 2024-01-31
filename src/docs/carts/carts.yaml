@@ -1,0 +1,225 @@
+paths:
+  /api/carts/:
+    get:
+      summary: Obtener todos los carritos
+      tags:
+        - Carts
+      responses:
+        "200":
+          description: Carritos obtenidos correctamente
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Carts"
+        "500":
+          description: Error interno del servidor
+    post:
+      tags:
+        - Carts
+      summary: Crear un nuevo carrito
+      responses:
+        "201":
+          description: Carrito creado correctamente
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Carts"
+        "400":
+          description: Mala peticion
+        "500":
+          description: Error interno del servidor
+  /api/carts/{cid}:
+    get:
+      tags:
+        - Carts
+      summary: Obtener un carrito en especifico
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          schema:
+            $type: String
+          description: ID of cart to return
+      responses:
+        "200":
+          description: Carrito obtenido correctamente
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Carts"
+        "404":
+          description: Carrito no encontrado
+        "500":
+          description: Error interno del servidor
+    put:
+      summary: Actualizar un carrito existente
+      tags:
+        - Carts
+      parameters:
+        - name: cid
+          in: path
+          required: true
+          schema:
+            $type: String
+          description: ID del carrito a actualizar
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              _id:
+                type: string
+              id_prod:
+                type: string
+              quantity:
+                type: number
+      responses:
+        "200":
+          description: Carrito actualizado correctamente
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Carts"
+        "400":
+          description: Error en la solicitud
+        "404":
+          description: Carrito no encontrado
+        "500":
+          description: Error interno del servidor
+    delete:
+      tags:
+        - Carts
+      summary: Vaciar carrito
+      parameters:
+        - name: cid
+          in: path
+          description: ID del carrito a vaciar
+          required: true
+          schema:
+            $type: String
+      responses:
+        "200":
+          description: Carrito vaciado
+        "404":
+          description: Error en vaciar productos del carrito
+        "500":
+          description: Error interno del servidor
+  /api/carts/{cid}/products/{pid}:
+    post:
+      tags:
+        - Carts
+      summary: Agregar un producto al carrito
+      parameters:
+        - name: cid
+          in: path
+          description: ID del carrito al cual se quiere agregar el producto
+          required: true
+          schema:
+            $type: String
+        - name: pid
+          in: path
+          description: ID del producto a agregar
+          required: true
+          schema:
+            $type: String
+      responses:
+        "200":
+          description: "Producto agregado correctamente al carrito"
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: "#/components/schemas/Carts"
+        "400":
+          description: Error en la peticion
+        "404":
+          description: Error al agregar producto al carrito
+        "500":
+          description: Error interno del servidor
+    put:
+      tags:
+        - Carts
+      summary: Actualizar cantidad del producto existente en el carrito
+      parameters:
+        - name: cid
+          in: path
+          description: ID del carrito del cual se quiere actualizar el producto
+          required: true
+          schema:
+            $type: String
+        - name: pid
+          in: path
+          description: ID del producto a actualizar su cantidad
+          required: true
+          schema:
+            $type: String
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              quantity:
+                type: number
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: "#/components/schemas/Carts"
+        "400":
+          description: Error en la peticion
+        "404":
+          description: Carrito no encontrado
+        "500":
+          description: Error interno del servidor
+    delete:
+      summary: Borrar producto existente en el carrito
+      tags:
+        - Carts
+      parameters:
+        - name: cid
+          in: path
+          description: ID del carrito del cual se quiere eliminar el producto
+          required: true
+          schema:
+            $type: String
+        - name: pid
+          in: path
+          description: ID del producto a eliminar
+          required: true
+          schema:
+            $type: String
+      responses:
+        "200":
+          description: Producto eliminado correctamente del carrito
+        "404":
+          description: Error en borrar producto del carrito
+        "500":
+          description: Error interno del servidor
+components:
+  schemas:
+    Carts:
+      type: object
+      properties:
+        _id:
+          type: ObjectId
+          description: ID autogenerado por MongoDB
+        products:
+          type: Array
+          description: Productos existentes en el carrito
+      example:
+        _id: 6549e73474ac2f46b11f193b,
+        products:
+          [
+            {
+              "id_prod": "6549e83a74ac2f46b11f1945",
+              "quantity": 21,
+              "_id": "65af59107429a1320c355fcb",
+            },
+          ]

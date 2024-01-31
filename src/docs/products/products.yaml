@@ -1,0 +1,170 @@
+paths:
+  /api/products/:
+    get:
+      summary: Obtener a todos los productos
+      tags:
+        - Products
+      responses:
+        "200":
+          description: Productos obtenidos correctamente
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Products"
+        "500":
+          description: Error interno del servidor
+    post:
+      summary: Crear un nuevo productos
+      tags:
+        - Products
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              title:
+                type: string
+              description:
+                type: string
+              price:
+                type: number
+              code:
+                type: number
+              stock:
+                type: number
+              category:
+                type: string
+      responses:
+        "200":
+          description: Producto creado correctamente
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: "#/components/schemas/Products"
+        "500":
+          description: Error interno del servidor
+
+  /api/products/{pid}:
+    get:
+      summary: Obtener un producto en especifico
+      tags:
+        - Products
+      parameters:
+        - name: pid
+          in: path
+          required: true
+          schema:
+            $type: String
+          description: ID del producto a buscar
+      responses:
+        "200":
+          description: Producto obtenido correctamente
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: "#/components/schemas/Products"
+        "500":
+          description: Error interno del servidor
+    put:
+      summary: Actualizar producto
+      tags:
+        - Products
+      parameters:
+        - name: pid
+          in: path
+          required: true
+          schema:
+            $type: String
+          description: ID del producto a actualizar
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              title:
+                type: string
+              description:
+                type: string
+              price:
+                type: number
+              code:
+                type: number
+              stock:
+                type: number
+              category:
+                type: string
+      responses:
+        "201":
+          description: Producto actualizado correctamente
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: "#/components/schemas/Products"
+        "500":
+          description: Error interno del servidor
+    delete:
+      summary: Borrar un producto
+      tags:
+        - Products
+      parameters:
+        - name: pid
+          in: path
+          required: true
+          schema:
+            $type: String
+      responses:
+        "201":
+          description: Producto borrado correctamente
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: "#/components/schemas/Products"
+        "500":
+          description: Error interno del servidor
+components:
+  schemas:
+    Products:
+      type: object
+      properties:
+        _id:
+          type: ObjectId
+          description: ID autogenerado por MongoDB
+        title:
+          type: String
+          description: Nombre del producto
+        description:
+          type: String
+          description: Descripcion del producto
+        price:
+          type: Number
+          description: Precio del producto
+        thumbnail:
+          type: Array
+          description: Imagen del producto
+        code:
+          type: Number
+          description: Codigo del producto
+        stock:
+          type: Number
+          description: Stock del producto
+        category:
+          type: String
+          description: Categoria del producto
+      example:
+        _id: 6549e73474ac2f46b11f193b,
+        title: Nike Air Max,
+        description: Zapatillas Nike Negras Air Max,
+        price: $400.000,
+        thumbnail: []
+        code: 332,
+        stock: 24,
+        category: Zapatillas

@@ -1,0 +1,110 @@
+[31merror[39m: hola
+[31merror[39m: hola
+[31mwarning[39m: hola
+[31mwarning[39m: hola
+[32minfo[39m: GET es / - 15:03:27
+[31mwarning[39m: hola
+[31mwarning[39m: hola
+[34minfo[39m: GET es /error - 15:07:12
+[34minfo[39m: GET es /error - 15:07:44
+[34minfo[39m: GET es /error - 15:07:56
+[34minfo[39m: GET es /error - 15:07:58
+[32minfo[39m: GET es /error - 15:08:31
+[31merror[39m: hola
+[31merror[39m: hola
+[32minfo[39m: GET es /info - 15:08:41
+[32minfo[39m: hola
+[34minfo[39m: GET es /info - 15:09:06
+[34minfo[39m: hola
+[34minfo[39m: GET es /debug - 15:09:12
+[34minfo[39m: GET es /error - 15:09:27
+[34minfo[39m: GET es /fatal - 15:09:30
+[31mfatal[39m: hola
+[31mfatal[39m: hola
+[34minfo[39m: GET es /debug - 15:10:42
+[34minfo[39m: GET es /warning - 15:10:59
+[33mwarning[39m: hola
+[33mwarning[39m: hola
+[34minfo[39m: GET es /error - 15:11:04
+[34minfo[39m: GET es /error - 15:11:30
+[34minfo[39m: GET es /error - 15:11:53
+[30merror[39m: hola
+[30merror[39m: hola
+[34minfo[39m: GET es /error - 15:12:22
+[35merror[39m: hola
+[35merror[39m: hola
+[34minfo[39m: GET es /warning - 15:12:46
+[36mwarning[39m: hola
+[36mwarning[39m: hola
+[34minfo[39m: GET es /warning - 15:12:59
+[33mwarning[39m: hola
+[33mwarning[39m: hola
+[34minfo[39m: GET es /error - 15:13:09
+[35merror[39m: hola
+[35merror[39m: hola
+[36minfo[39m: GET es /error - 15:13:22
+[35merror[39m: hola
+[35merror[39m: hola
+[35merror[39m: hola
+[35merror[39m: hola
+[36minfo[39m: hola
+[36minfo[39m: Info
+[35merror[39m: Error
+[35merror[39m: Error
+[31mfatal[39m: Fatal
+[31mfatal[39m: Fatal
+[33mwarning[39m: Warning
+[33mwarning[39m: Warning
+[33mwarning[39m: Warning
+[33mwarning[39m: Warning
+[33mwarning[39m: Warning
+[33mwarning[39m: <h1 style:"color:blue">Warning</span><br/>
+[33mwarning[39m: <h1 style:"color:blue">Warning</span><br/>
+[33mwarning[39m: <h1 style:"color:blue">Warning</span><br/>
+[33mwarning[39m: <span style:"color:blue">Warning</span><br/>
+[33mwarning[39m: <span style:"color:blue">Warning</span><br/>
+[33mwarning[39m: <span style:"color:blue">Warning</span><br/>
+[33mwarning[39m: <span style="color:blue">Warning</span><br/>
+[33mwarning[39m: <span style="color:blue">Warning</span><br/>
+[33mwarning[39m: <span style="color:blue">Warning</span><br/>
+warning: <span style="color:yellow">Warning</span><br/>
+info: <span style="color:cyan">Info</span><br/>
+fatal: <span style="color:red">Fatal</span><br/>
+error: <span style="color:magenta">Error</span><br/>
+info: <span style="color:cyan">Info</span><br/>
+info: <span style="color:cyan">Info</span><br/>
+error: <span style="color:magenta">Error</span><br/>
+warning: <span style="color:yellow">Warning</span><br/>
+fatal: <span style="color:red">Fatal</span><br/>
+warning: <span style="color:yellow">Warning</span><br/>
+warning: <span style="color:yellow">Warning</span><br/>
+warning: <span style="color:yellow">Warning</span><br/>
+warning: <span style="color:yellow">Warning</span><br/>
+warning: <span style="color:yellow">Warning</span><br/>
+warning: <span style="color:yellow">Warning</span><br/>
+warning: <span style="color:yellow">Warning</span><br/>
+info: <span style="color:cyan">Info</span><br/>
+fatal: <span style="color:red">Fatal</span><br/>
+info: <span style="color:cyan">Info</span><br/>
+error: <span style="color:magenta">Error</span><br/>
+warning: <span style="color:yellow">Warning</span><br/>
+warning: <span style="color:yellow">Warning</span><br/>
+warning: <span style="color:yellow">Warning</span><br/>
+warning: <span style="color:yellow">Warning</span><br/>
+warning: <span style="color:yellow">Warning</span><br/>
+error: <span style="color:magenta">Error</span><br/>
+error: <span style="color:magenta">Error</span><br/>
+fatal: <span style="color:red">Fatal</span><br/>
+fatal: <span style="color:red">Fatal</span><br/>
+fatal: <span style="color:red">Fatal</span><br/>
+fatal: <span style="color:red">Fatal</span><br/>
+fatal: <span style="color:red">Fatal</span><br/>
+fatal: <span style="color:red">Fatal</span><br/>
+fatal: <span style="color:red">Fatal</span><br/>
+fatal: <span style="color:red">Fatal</span><br/>
+fatal: <span style="color:red">Fatal</span><br/>
+fatal: <span style="color:red">Fatal</span><br/>
+fatal: <span style="color:red">Fatal</span><br/>
+fatal: <span style="color:red">Fatal</span><br/>
+fatal: <span style="color:red">Fatal</span><br/>
+fatal: <span style="color:red">Fatal</span><br/>
