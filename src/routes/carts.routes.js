@@ -14,12 +14,12 @@ import { passportError, authorization } from "../utils/messagesError.js";
 
 const cartRouter = Router();
 
-cartRouter.get("/", passportError("jwt"), authorization("admin"), getCart);
+cartRouter.get("/", passportError("jwt"), authorization("user"), getCart);
 
 cartRouter.get(
   "/:cid",
   passportError("jwt"),
-  authorization("admin"),
+  authorization("user"),
   getCartById
 );
 
