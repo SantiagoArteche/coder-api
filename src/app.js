@@ -17,7 +17,7 @@ const whiteList = [
   "http://localhost:4000",
   "http://localhost:5173",
   "https://proy-final-front-coder.onrender.com",
-  "https://proy-final-backend-front-coderhouse.vercel.app/",
+  "https://proy-final-backend-front-coderhouse.vercel.app",
 ];
 
 const corsOptions = {
