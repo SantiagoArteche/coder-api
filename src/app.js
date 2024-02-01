@@ -13,7 +13,11 @@ import cors from "cors";
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUiExpress from "swagger-ui-express";
 
-const whiteList = ["http://localhost:4000", "http://localhost:5173"];
+const whiteList = [
+  "http://localhost:4000",
+  "http://localhost:5173",
+  "https://proy-final-front-coder.onrender.com",
+];
 
 const corsOptions = {
   origin: function (origin, callback) {
